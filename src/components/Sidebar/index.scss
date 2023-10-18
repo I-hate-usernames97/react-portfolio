@@ -46,7 +46,7 @@
         }
   
         &:hover {
-          color: #ffd700;
+          color: #b1b1b1;
   
           svg {
             opacity: 0;
@@ -96,11 +96,6 @@
         }
       }
   
-      a.active {
-        svg {
-          color: #ffd700;
-        }
-      }
     }
   
     ul {
@@ -123,7 +118,7 @@
         }
   
         &:hover svg {
-            color: #ffd700;
+            color: #b1b1b1;
       
         }
       }

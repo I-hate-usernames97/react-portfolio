@@ -15,24 +15,24 @@ const Sidebar = () => (
         </Link>
         <nav>
             <NavLink exact='true' activeclassname='active' to="/">
-                <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+                <FontAwesomeIcon icon={faHome} color="#b1b1b1" />
             </NavLink>
             <NavLink exact='true' activeclassname='active' className="about-link" to="/about">
-                <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+                <FontAwesomeIcon icon={faUser} color="#b1b1b1" />
             </NavLink>
             <NavLink exact='true' activeclassname='active' className="contact-link" to="/contact">
-                <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+                <FontAwesomeIcon icon={faEnvelope} color="#b1b1b1" />
             </NavLink>
         </nav>
         <ul>
             <li>
                 <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/christopher-john-hahn/'>
-                    <FontAwesomeIcon icon={faLinkedinIn} color="#4d4d4e" />
+                    <FontAwesomeIcon icon={faLinkedinIn} color="#b1b1b1" />
                 </a>
             </li>
             <li>
                 <a target='_blank' rel='noreferrer' href='https://github.com/I-hate-usernames97'>
-                    <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+                    <FontAwesomeIcon icon={faGithub} color="#b1b1b1" />
                 </a>
             </li>
         </ul>
