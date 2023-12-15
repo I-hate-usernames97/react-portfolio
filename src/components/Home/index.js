@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
+import Loader from 'react-loaders'
+
 import { Link } from 'react-router-dom'
 import './index.scss'
 
@@ -12,11 +14,12 @@ const Home = () => {
 useEffect(() => {
     setTimeout(() => {
     setLetterClass('text-animate-hover');
-  }, 4000);
+  }, 3500);
 }, []);
 
 
     return (
+        <>
         <div className="contaner home-page">
             <div className="taxt-zone">
                  
@@ -32,12 +35,16 @@ useEffect(() => {
                 <AnimatedLetters letterClass={letterClass}
                 strArray={jobArray}
                 idx={22} />
-                </h1>
+                
                 <h2>Full Stack Developer / Java / JavaScript / React / SpringBoot / MySql / AngularJS </h2>
                 
                 <Link to="/contact" className="flat-button">CONTACT ME</Link>
+                
+                </h1>
             </div>
         </div>
+        <Loader type="pacman" />
+        </>
     )
 }
 export default Home
