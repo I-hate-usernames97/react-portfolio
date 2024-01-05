@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
+import emailjs from '@emailjs/browser';
 import Loader from 'react-loaders'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { useRef } from 'react'
-import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
@@ -15,6 +14,24 @@ const Contact = () => {
     setLetterClass('text-animate-hover');
   }, 3500);
 }, []);
+
+const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_4hw0nkx', 'react-portfolio', form.current, '_MSo9EQ70rgRXg1X7')
+    .then(
+      () => {
+        alert('Message successfully sent!')
+        window.location.reload(false)
+      },
+      () => {
+        alert('Failed to send the message, please try again')
+      }
+    )
+}
+
 
   return (
     <>
@@ -32,7 +49,7 @@ const Contact = () => {
           </p>
 
           <div className='contact-form'>
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
                 <ul>
                     <li className='half'>
                         <input type='text' name='name' placeholder='Name' required />

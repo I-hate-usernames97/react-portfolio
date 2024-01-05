@@ -78,6 +78,11 @@
     float: right;
     text-align: center;
     margin-right: 10px;
+
+    &:hover {
+      background: #b1b1b1;
+      color: #333;
+}
   }
 
 }
